@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Document</title>
+</head>
+<body>
+    <h1 class="text-center text-2xl">Input text here</h1>
+    <div class="text-center pt-5">
+        <input id="input" class="border border-red-600 rounded-md text-center h-12 w-64" type="text"> <br>
+        <button id="button" class="border border-black mt-5 px-5 py-2 rounded-full bg-emerald-800 text-white">Update text</button>
+    </div>
+    <h1 id="show" class="text-center mt-5 text-2xl">Defult text </h1>
+
+    <script>
+        document.getElementById("button").addEventListener("click", function(){
+
+            const inputField = document.getElementById("input");
+            const inputText = inputField.value;
+            
+            const show = document.getElementById("show");
+            show.innerText = inputText;
+
+            inputField.value = ''
+
+
+        } )
+    </script>
+</body>
+</html>

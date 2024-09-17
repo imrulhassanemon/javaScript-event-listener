@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Js Dom Events</title>
+</head>
+<body>
+    
+    <h1>Dom er ajk special event</h1>
+    <button onclick="console.log('hello brother')">Click me</button>
+    <button onclick="console.log(7)">Another button</button>
+    <button onclick="document.body.style.backgroundColor = 'lightgray'">Make me light gray</button>
+    <button onclick="makePinkee()">Make pink</button>
+    <br>
+    <button onclick="document.body.style.backgroundColor = 'lightblue' ">Light blue</button>
+    <button onclick="makeRed()">Make gray</button>
+    <button id="make-yellow">Make yellow</button>
+    <button id="purple">Make purple</button>
+    <button id="green">Make green</button>
+    <button id="reds">Make red</button>
+    <button id="bluee"> Make blue</button>
+
+    <script src="js/events.js"></script>
+    <script>
+    document.getElementById("bluee").addEventListener("click", function(){
+        document.body.style.backgroundColor = "#9041fb"
+    })
+    
+    </script>
+</body>
+</html>

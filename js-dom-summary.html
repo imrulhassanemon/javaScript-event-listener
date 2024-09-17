@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Js Dom summary</title>
+</head>
+<body>
+    <h1>Final dom event summary</h1>
+    <h2 id="handel">Hello boss </h2>
+    <h2 id="eventlistener">Click here to change text by add event listener</h2>
+    <button onclick="clickMe()">Handel Event by Add onclick function</button>
+    <button id="handel-2">Handel Event by addEventListener</button>
+    <br>
+    <br>
+    <h3 id="update">Defult text</h3>
+    <h5>input text here to Update above text</h5>
+    <input id="input-field" type="text">
+    <button id="button">Update</button>
+    <script>
+        // text update 
+
+        document.getElementById("button").addEventListener("click", function(){
+            
+            
+            // input field
+            const inputField = document.getElementById("input-field");
+            const values  = inputField.value;
+            const updates = document.getElementById("update").innerText = `${values}`
+            
+            
+
+        })
+
+
+
+        function clickMe (){
+            // document.getElementById("handel").innerText = "Let's play in field"
+            const click = document.getElementById("handel");
+            click.innerText = "Let's have a fun. "
+        }
+
+        // hande event by add onclick function
+        const click2 = document.getElementById("handel-2");
+        click2.addEventListener("click", function(){
+            document.getElementById("eventlistener").innerText = "The text is changed";
+        })
+    </script>
+</body>
+</html>

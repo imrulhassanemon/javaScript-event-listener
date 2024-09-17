@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="main-div">
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quae animi voluptatum velit in aspernatur, consequatur non alias cum quos impedit cupiditate sunt totam labore iure ex necessitatibus a corporis laudantium dolores perspiciatis. Ea deleniti magnam amet, voluptas est voluptate officiis molestiae aperiam quaerat sapiente sit quae consectetur, dolore natus adipisci?</p>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quae animi voluptatum velit in aspernatur, consequatur non alias cum quos impedit cupiditate sunt totam labore iure ex necessitatibus a corporis laudantium dolores perspiciatis. Ea deleniti magnam amet, voluptas est voluptate officiis molestiae aperiam quaerat sapiente sit quae consectetur, dolore natus adipisci?</p>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quae animi voluptatum velit in aspernatur, consequatur non alias cum quos impedit cupiditate sunt totam labore iure ex necessitatibus a corporis laudantium dolores perspiciatis. Ea deleniti magnam amet, voluptas est voluptate officiis molestiae aperiam quaerat sapiente sit quae consectetur, dolore natus adipisci?</p>
+    </div>
+    <textarea name="" cols="60" rows= "5" id="text-area"></textarea>
+    <br>
+    <button id="post">Post Comment</button>
+    <script>
+        const Button = document.getElementById("post").addEventListener("click", function(){
+        const textArea = document.getElementById("text-area");
+        const text = textArea.value;
+        
+
+        const div = document.getElementById("main-div");
+        const p = document.createElement("p")
+        p.innerHTML = text;
+        div.appendChild(p)
+        textArea.value = ""
+
+        })
+    </script>
+</body>
+</html>

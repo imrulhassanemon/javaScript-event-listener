@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Comment box</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-600 p-10">
+    <div id="main-div" class="text-white text-3xl">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero odit consectetur distinctio reiciendis unde officiis, aperiam similique ut a sed veniam consequuntur rem velit iusto omnis optio aut vitae eum accusamus tenetur numquam dolores fugit? Eum eveniet incidunt tempore corporis beatae sit nisi! Quam id dicta dignissimos, magni laudantium repudiandae?</p>
+        <!-- <br> -->
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero odit consectetur distinctio reiciendis unde officiis, aperiam similique ut a sed veniam consequuntur rem velit iusto omnis optio aut vitae eum accusamus tenetur numquam dolores fugit? Eum eveniet incidunt tempore corporis beatae sit nisi! Quam id dicta dignissimos, magni laudantium repudiandae?</p>
+        <!-- <br> -->
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vero odit consectetur distinctio reiciendis unde officiis, aperiam similique ut a sed veniam consequuntur rem velit iusto omnis optio aut vitae eum accusamus tenetur numquam dolores fugit? Eum eveniet incidunt tempore corporis beatae sit nisi! Quam id dicta dignissimos, magni laudantium repudiandae?</p>
+    </div>
+  <div class="text-center pt-8">
+    <textarea class="rounded-xl p-2" name="" cols="60" rows="5" id="text-area"></textarea>
+    <br>
+    <button id="post-btn" class="bg-amber-600  px-6 py-2 rounded-md text-2xl text-white font-semibold">Post</button>
+  </div>
+
+    <script>
+        document.getElementById("post-btn").addEventListener("click", function(){
+            const textArea = document.getElementById("text-area");
+            const Text = textArea.value;
+            console.log(Text)
+
+            const mainDiv = document.getElementById("main-div");
+            const p = document.createElement("p");
+            p.innerText = Text;
+            mainDiv.appendChild(p)
+            textArea.value = ''
+        })
+    </script>
+</body>
+</html>
