@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Explore more events</h1>
+    <button id="button-more">Events</button>
+    <input type="text" id="text">
+    <script>
+        // document.getElementById("text").addEventListener("focus", function(){
+        //     console.log("hello")
+        // })
+        // document.getElementById("text").addEventListener("blur", function(){
+        //     console.log("Event teggered blur")
+        // })
+        // document.getElementById("text").addEventListener("keydown", function(){
+        //     console.log(event.target.value)
+        // })
+        document.getElementById("text").addEventListener("keypress", function(){
+            console.log(event.target.value)
+        })
+        document.getElementById("button-more").addEventListener("mouseenter", function(){
+            console.log("hello")
+        })
+    </script>
+</body>
+</html>
