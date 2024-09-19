@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>bubble</title>
+    <style>
+        section{
+            border: 1px solid slategray;
+        }
+        ul{
+            border: 1px solid rgb(226, 17, 17);
+        }
+        #item-2{
+            border: 1px solid rgb(17, 20, 226);
+        }
+        body{
+            border: 1px solid rgb(17, 20, 226);
+        }
+    </style>
+</head>
+<body id="body">
+    <h1>hello</h1>
+    <section id="section">
+        <ul id="list-ul">
+            <li id="item-1">Lorem, ipsum.</li>
+            <li id="item-2">Laudantium, quo.</li>
+            <li id="item-3">Delectus, aut.</li>
+            <li id="item-4">Soluta, autem.</li>
+            <li id="item-5">Nulla, quisquam.</li>
+            <li id="item-6">Officiis, quas!</li>
+        </ul>
+    </section>
+    <script>
+        document.getElementById("item-2").addEventListener("click", function(event){
+            console.log("item-2 cliked")
+            event.stopImmediatePropagation() 
+        })
+        document.getElementById("item-2").addEventListener("click", function(event){
+            console.log("second item-2 cliked")
+            
+        })
+        document.getElementById("item-2").addEventListener("click", function(event){
+            console.log("third item-2 cliked")
+            
+        })
+        document.getElementById("item-2").addEventListener("click", function(event){
+            console.log("forth item-2 cliked")
+            
+        })
+        document.getElementById("list-ul").addEventListener("click", function(){
+            console.log("ul cliked")
+        })
+        document.getElementById("section").addEventListener("click", function(){
+            console.log("section cliked")
+        })
+        document.getElementById("body").addEventListener("click", function(){
+            console.log("body clicked cliked")
+        })
+    </script>
+</body>
+</html>

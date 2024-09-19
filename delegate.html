@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Delegate</title>
+</head>
+<body>
+    <h1>
+        Event Deligate
+    </h1>
+    <section>
+        <ul id="listcontainer">
+            <li class="item">Lorem, ipsum.</li>
+            <li class="item">Nobis, ipsa?</li>
+            <li class="item">A, quaerat.</li>
+            <li class="item">Enim, ratione!</li>
+            <li class="item">Magnam, placeat.</li>
+            <li class="item">Fuga, velit.</li>
+        </ul>
+        <button id="add-btn">Add Item</button>
+    </section>
+    <script>
+        
+        // const items = document.getElementsByClassName("item");
+        // for(const item of items){
+        //     item.addEventListener("click", function(event){
+        //         event.target.parentNode.removeChild(event.target);
+        //     })
+        // }
+        
+        document.getElementById("listcontainer").addEventListener("click", function(event){
+            // for(const item of items){
+            //     item.addEventListener("click", function(){
+            //         // event.target.parentNode.removeChild(event.target)
+            //         console.log(event.target)
+            //     })
+            // }
+            console.log(event.target)
+            event.target.parentNode.removeChild(event.target)
+        })
+
+
+
+        document.getElementById("add-btn").addEventListener("click", function(){
+            const listContainer = document.getElementById("listcontainer");
+            
+            const li =  document.createElement("li");
+            li.innerText = "hello boss I am added";
+            li.classList.add("item")
+            
+            listContainer.appendChild(li) 
+        })
+    </script>
+</body>
+</html>
