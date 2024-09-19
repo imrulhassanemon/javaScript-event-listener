@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Delete Text like github</title>
+</head>
+<body>
+    <h1 id="text">Click the button to remove the text</h1>
+    <input type="text" id="text-input">
+    <button id="delete_btn" disabled>Delete</button>
+    <script>
+        document.getElementById("text-input").addEventListener("keyup", function(event){
+            const text = event.target.value;
+            const delet = document.getElementById("delete_btn");
+            console.log(text)
+            if(text === "delete"){
+                delet.removeAttribute("disabled")
+            }else{
+                delet.setAttribute("disabled", true)
+            }
+        })
+
+        document.getElementById("delete_btn").addEventListener("click", function(){
+            const text = document.getElementById("text");
+            text.style.display = "none"
+        })
+    </script>
+</body>
+</html>

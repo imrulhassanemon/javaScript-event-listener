@@ -26,5 +26,5 @@ function calculateFinalScore(obj) {
     
     }
 
-const myfunc = calculateFinalScore({ name: "Rajib", testScore: 15,  schoolGrade: 25, isFFamily : true  } )
+const myfunc = calculateFinalScore({ name: "Rajib", testScore: 50,  schoolGrade: 25, isFFamily : true  } )
 console.log(myfunc)

@@ -3,9 +3,26 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>delet item</title>
+    <title>delete item</title>
 </head>
 <body>
-    
+    <h1 id="remove">Press the button to delete the text</h1>
+    <input type="text" id="input-text" placeholder="please type delete">
+    <button id="deletee" disabled>Delete</button>
+    <script>
+        document.getElementById("input-text").addEventListener("keyup", function(event){
+            const text = event.target.value;
+            const delete_btn = document.getElementById("deletee");
+            // console.log(text)
+            if(text === "delete"){
+                delete_btn.removeAttribute('disabled') 
+            }
+        })
+
+        document.getElementById("deletee").addEventListener("click", function(){
+           const remove =  document.getElementById("remove");
+           remove.style.display = "none"       
+        })
+    </script>
 </body>
 </html>
